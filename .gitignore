@@ -1,6 +1,11 @@
+# Latex auxiliary files
 *.aux
 *.log
 *.nav
 *.out
 *.snm
 *.toc
+
+# BibTex auxiliary files
+*.bbl
+*.blg
