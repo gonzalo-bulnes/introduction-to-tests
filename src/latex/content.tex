@@ -64,6 +64,87 @@
     \end{alertblock}
   \end{frame}
 
+% Structure and meaning
+\section{Estructura y alcance}
+
+  \begin{frame}
+    \tableofcontents[currentsection]
+  \end{frame}
+
+%
+\subsection{Ejemplo de test}
+
+  \begin{frame}{\insertsubsection}
+    %
+    \vspace{-2.8em}
+    \begin{description}
+      \item[Hipótesis] El café está caliente.
+    \end{description}
+    \vspace{+0.7em}
+    %
+    \begin{description}
+      \item<2->[\alert{Dado}] un café
+      \item<3->[\alert{Cuando}] toco el tazón con la mano
+      \item<4->[\alert{Entonces}] me quemo la mano
+    \end{description}
+  \end{frame}
+
+%
+\subsection{Estructura}
+
+  \begin{frame}{\insertsubsection}
+    \begin{description}
+      \item<2->[Dado] un juego de \alert{condiciones iniciales}
+      \item<3->[Cuando] se ejecuta el \alert{protocolo}
+      \item<4->[Entonces] se cumplen las \alert{expectativas}
+    \end{description}
+  \end{frame}
+
+%
+\subsection{Alcance}
+
+  \begin{frame}[label=expectativa]{\insertsubsection~(partiendo del final)}
+
+    \begin{block}{Entonces\dots \alert{expectativa}}
+      % es el elemento que tiene más relación con la hipótesis
+      Describe qué es lo que espero que pase si la hipótesis es correcta,
+      pueden haber varias expectativas para un mismo protocolo.
+    \end{block}
+    \begin{block}{}
+      \begin{itemize}
+        \item Depende estrechamente de la manera en que está escrita la hipótesis (a través del \emph{criterio de éxito del test} y del \emph{criterio de validación de la hipótesis})
+        \hyperlink{criterios}{\beamergotobutton{Definición de ambos criterios}}
+        %
+        \item Debe asegurar un resultado sin ambigüedad, \alert{binario} (es esencial para poder \alert{\emph{actuar}}, tomar una decisión a partir del resultado del test)
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}{\insertsubsection}
+    \begin{block}{Cuando\dots}
+      Describe el \alert{\emph{protocolo}} a seguir para ejecutar el test.
+    \end{block}
+    \begin{block}{}
+      \begin{itemize}
+        \item Es generalmente una succesión de varios pasos ordenados
+        \item Se pueden escribir: \alert{cuando} toco el tazón con la mano \alert{y}~\dots\\
+        (también se puede usar para reemplazar \emph{dado} y \emph{entonces})
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}{\insertsubsection}
+    \begin{block}{Dado\dots \alert{condiciones iniciales}}
+      Describen el \emph{contexto} necesario para ejecutar el protocolo.
+    \end{block}
+    \begin{block}{}
+      \begin{itemize}
+        \item Se construyen a partir del protocolo
+        \item Aseguran la \alert{reproductibilidad} del test
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
 % Conclusión
 \section*{Conclusión}
 
@@ -127,3 +208,21 @@
     \end{center}
   \end{frame}
 % EOF
+
+\appendix
+
+% Appendix
+\section{Anexos}
+
+%
+\subsection{Criterios de éxito, validación}
+
+\begin{frame}[label=criterios]
+  \begin{block}{Criterio de éxito del test}
+    Es siempre el mismo: si \alert{todas} las expectativas se cumplen, el test \emph{tuvo éxito}, sino, el test \emph{falló}.
+  \end{block}
+  \begin{block}{Criterio de validación de la hipótesis}
+    También es siempre el mismo: si el test tuvo éxito, la hipótesis está validada, de lo contrario está invalidada.
+  \end{block}
+  \hfill \hyperlink{expectativa}{\beamergotobutton{Volver a la estructura de los tests}}
+\end{frame}
