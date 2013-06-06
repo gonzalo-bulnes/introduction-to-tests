@@ -93,6 +93,13 @@
 \subsection{Estructura}
 
   \begin{frame}{\insertsubsection}
+    %
+    \vspace{-2.8em}
+    \begin{description}
+      \item[Hipótesis] sin la cual no hay test, ni conocimiento nuevo.
+    \end{description}
+    \vspace{+0.7em}
+    %
     \begin{description}
       \item<2->[Dado] un juego de \alert{condiciones iniciales}
       \item<3->[Cuando] se ejecuta el \alert{protocolo}
@@ -145,12 +152,57 @@
     \end{block}
   \end{frame}
 
-% Conclusión
-\section*{Conclusión}
+% % Why write tests?
+% \section{¿Para qué escribir tests?}
 
-  \begin{frame}{\insertsection}
-    % TODO
-  \end{frame}
+% %
+% \subsection{Comunicar}
+
+%   \begin{frame}{\insertsubsection}
+%     \begin{block}{De forma eficaz (incluso en equipos multidisciplinarios)}
+%       \begin{itemize}
+%         \item Escribir un test obliga a hacer \alert{explícitas} las expectativas,\\
+%         los \emph{criterios de aceptación}, evita malentendidos
+%         \item El test se escribe en conjunto, fuera de las áreas especializadas, define un \alert{lenguaje común a todo el equipo}
+%       \end{itemize}
+%     \end{block}
+%     %
+%     \vfill\vfill
+%     \begin{columns}
+%       \column{.2\textwidth}
+%       \column{.8\textwidth}
+%         \begin{quote}
+%           \hfill\ding{125}\hspace{.3em}\small \href{http://www.python.org/dev/peps/pep-0020}{Explicit is better than implicit.}\normalsize\hspace{.5em}\ding{126}\\
+%           \hfill \small --- Tim Peters \cite{peters2004zenofpython}\normalsize
+%         \end{quote}
+%     \end{columns}
+%   \end{frame}
+
+%   \begin{frame}{\insertsubsection~(2)}
+%     \begin{block}{Con orientación a resultados}
+%       \begin{itemize}
+%         \item Cada test require una hipótesis, eso garantiza que el trabajo genera \emph{conocimiento}, \emph{validated learning} \cite{ries2011lean}
+%       \end{itemize}
+%     \end{block}
+%     \begin{block}{\dots~incluso fuera del equipo}
+%       \begin{itemize}
+%         \item Un conjunto de tests facilita a personas exteriores al equipo \emph{visualizar} su dinámica interna
+%       \end{itemize}
+%     \end{block}
+%   \end{frame}
+
+% %
+% \subsection{Fiabilizar, extender\dots}
+
+%   \begin{frame}{\insertsubsection}
+%     \begin{block}{Con tests \alert{automatizados}}
+%       \begin{description}
+%         \item[Extender] con tests de \emph{aceptación}
+%         \item[Fiabilizar] con tests de \emph{regresión}
+%         \item[Explorar] siguiendo principios de \emph{behaviour-driven development}
+%       \end{description}
+%     \end{block}
+%   \end{frame}
 
 \appendix
 
@@ -207,9 +259,7 @@
       Gracias por su atención.
     \end{center}
   \end{frame}
-% EOF
 
-\appendix
 
 % Appendix
 \section{Anexos}
@@ -226,3 +276,4 @@
   \end{block}
   \hfill \hyperlink{expectativa}{\beamergotobutton{Volver a la estructura de los tests}}
 \end{frame}
+% EOF
