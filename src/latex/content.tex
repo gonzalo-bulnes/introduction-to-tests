@@ -12,24 +12,57 @@
 \end{frame}
 
 \begin{frame}
-  \tableofcontents
+  %\tableofcontents
+  \emph{A menos que yo esté equivocado}, al final de esta charla, usted debería poder decir:\\~\\
+  \hspace{.9em}\ding{125}\vspace{-1.4em}
+  \begin{quote}
+    Como parte de la audiencia de la charla, para cada hipótesis que me proponga, sé escribir un test.
+    \hspace{.5em}\ding{126}
+  \end{quote}
 \end{frame}
 
 % Licencias de software libre
-\section{\dots}
+\section{Definición}
 
   \begin{frame}
     \tableofcontents[currentsection]
   \end{frame}
 
 %
-\subsection{Definiciones}
+\subsection{Objetivo y finalidad de los tests}
 
-  \begin{frame}{\insertsection}
-    % TODO
-    \dots
+  \begin{frame}{\insertsubsection}
+    \begin{alertblock}{Objetivo}
+      Todo test tiene por objetivo \alert{validar} una \emph{hipótesis}, es decir transformar una hipótesis (algo incierto) en un \emph{conocimiento} (algo cierto).
+    \end{alertblock}
+    \begin{block}{Finalidad}
+      %El conocimiento de los hechos permite tomar decisiones.\\
+      Obtener hipótesis válidas permite \alert{tomar decisiones correctas}, ésta es la \emph{finalidad} del testing.
+    \end{block}
   \end{frame}
 
+\subsection{Lista de términos y definiciones}
+
+  \begin{frame}{\insertsubsection}
+    \begin{description}
+      \item[Hipótesis] Afirmación que se supone cierta
+      \item[Protocolo] Descripción paso a paso de un \emph{proceso}
+      \item[Proceso] Resultado de la ejecución de un \emph{protocolo}\\
+           (es decir que más o menos cualquier cosa que se puede \emph{describir paso a paso} es un proceso)
+    \end{description}
+  \end{frame}
+
+\subsection{Forma general de un test}
+
+  \begin{frame}{\insertsubsection}
+    \begin{alertblock}{Descripción general}
+      Visto de lejos, en todo test se pueden distinguir:
+      \begin{enumerate}
+        \item un \emph{proceso} (que no tiene nada particular)
+        \item un \emph{resultado} que es \alert{binario}, es decir que solo tiene dos valores posibles: el test \alert{falla}, o el test \alert{tiene éxito}. (No existe otra posibilidad, sino el proceso no es un test.)
+      \end{enumerate}
+    \end{alertblock}
+  \end{frame}
 
 % Conclusión
 \section*{Conclusión}
